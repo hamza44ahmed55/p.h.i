@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="icon" type="image/x-icon" href="Black and White Modern Elegant Initial Letter Perfume Logo.png">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Additional Considerations</title>
+</head>
+
+<body>
+    <p>Additional Considerations When defining integrations, the Workflow Mode, and load method directly impact the performance of the load based on the specific data volume. When loading up to about 500,000 source records/rows, any workflow mode is recommended
+        when using the load method of "Numeric Data Only." When using the load method of "All Data with Security," expect that the data load takes longer because each row is validated against the target application in regard to any user defined security.
+        When loading files over 1,000,000 rows, the system performs batch updates and deletions from the TDATASEG_T and TDATASEG tables based on the "Batch Size" setting in the Target Options (see Defining Target Options). In some cases, files over 1,000,000
+        rows may be split into files each with less than 1,000,000 rows, and this usually results in a performance improvement. Users may then create multiple integrations, one for each file, and then combine these integrations into a batch, running the
+        batch in parallel mode to maintain the performance achieved by splitting the file. This provides a single execution point, that kicks off multiple rules for the split file. The following table provides recommendations in regard to workflow mode,
+        load method and data volume. Table A-1 Recommend Workflow Mode, Load Method, and Data Volume Workflow Mode Load Method Row Count Full Workflow Numeric Data Only Up to about 3 million rows Simple Workflow Numeric Data Only Up to about 4-5 million
+        rows Full Workflow Admin User All Data with Security Validate Data for Admin = Yes Less than 500,000 rows Full Workflow Admin User All Data with Security Validate Data for Admin = No (This loads to the target using the Outline Load Utility) Up
+        to about 3 million rows Quick Mode Numeric Data Only Any row count Quick Mode Validate Data for Admin = Yes is not supported. Admin User</p>
+</body>
+
+</html>
